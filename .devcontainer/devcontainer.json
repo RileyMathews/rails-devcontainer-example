@@ -9,5 +9,19 @@
         "castwide.solargraph",
         "kaiwood.endwise",
         "noku.rails-run-spec-vscode"
-    ]
+    ],
+    "settings": {
+        "[ruby]": {
+            "editor.formatOnSave": true
+        },
+        "ruby.format": "rubocop",
+        "editor.formatOnSaveTimeout": 2500,
+        "ruby.codeCompletion": false,
+        "ruby.intellisense": "rubyLocate",
+        "ruby.lint": {
+            "rubocop": true
+        },
+        "ruby.useBundler": true,
+        "solargraph.commandPath": "/usr/local/bundle/bin/solargraph"
+    },
 }
