@@ -1,0 +1,12 @@
+{
+    "dockerFile": "../Dockerfile",
+    "context": "..",
+    "appPort": [
+        "3000:3000"
+    ],
+    "extensions": [
+        "rebornix.ruby",
+        "castwide.solargraph",
+        "kaiwood.endwise"
+    ]
+}
