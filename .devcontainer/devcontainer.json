@@ -7,6 +7,7 @@
     "extensions": [
         "rebornix.ruby",
         "castwide.solargraph",
-        "kaiwood.endwise"
+        "kaiwood.endwise",
+        "noku.rails-run-spec-vscode"
     ]
 }
