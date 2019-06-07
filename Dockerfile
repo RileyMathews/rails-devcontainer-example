@@ -9,7 +9,7 @@ COPY Gemfile /workspaces/
 COPY Gemfile.lock /workspaces/
 
 RUN bundle install
-RUN yard gems
+RUN gem install solargraph && yard gems
 
 COPY . /workspaces/
 EXPOSE 3000
