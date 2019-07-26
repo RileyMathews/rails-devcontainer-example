@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class HighScoresController < ApplicationController
-  before_action :set_high_score, only: [:show, :edit, :update, :destroy]
+  before_action :set_high_score, only: %i[show edit update destroy]
 
   # GET /high_scores
   # GET /high_scores.json
@@ -9,8 +11,7 @@ class HighScoresController < ApplicationController
 
   # GET /high_scores/1
   # GET /high_scores/1.json
-  def show
-  end
+  def show; end
 
   # GET /high_scores/new
   def new
@@ -18,8 +19,7 @@ class HighScoresController < ApplicationController
   end
 
   # GET /high_scores/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /high_scores
   # POST /high_scores.json
@@ -62,13 +62,14 @@ class HighScoresController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_high_score
-      @high_score = HighScore.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def high_score_params
-      params.require(:high_score).permit(:game, :score)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_high_score
+    @high_score = HighScore.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def high_score_params
+    params.require(:high_score).permit(:game, :score)
+  end
 end
